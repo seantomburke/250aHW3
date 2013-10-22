@@ -58,7 +58,8 @@ for n in range (1,100):
 	            log[n-1] += math.log((1-lamb[n-1])*(float(freq)/ float(unigrams[vocab.index(sentence[i-1])])) + (lamb[n-1])*(float(unigrams[vocab.index(word1)])/float(total_unigram_words)))
 	        else:
 	            #print word1_unk + "\t" + word2_unk +"\t" + str(log)
-	            log[n-1] += math.log((1-lamb[n-1])*(float(freq_unk)/float(unigrams[vocab.index(sentence[i-1])])) + (lamb[n-1])*(float(unigrams[vocab.index(word1_unk)])/float(total_unigram_words))) 
+	            #log[n-1] += math.log((1-lamb[n-1])*(float(freq_unk)/float(unigrams[vocab.index(sentence[i-1])])) + (lamb[n-1])*(float(unigrams[vocab.index(word1_unk)])/float(total_unigram_words))) 
+	            log[n-1] += math.log(1)
 	        found = False 
 	print "Log Likelihood: " + str(log[n-1]) + "\tLambda: " + str(lamb[n-1])
 #print log

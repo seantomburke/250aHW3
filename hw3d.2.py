@@ -48,7 +48,8 @@ for i in range (len(sentence)):
             log += math.log(float(freq)/float(unigrams[vocab.index(sentence[i-1])]))
         else:
             print word1_unk + "\t" + word2_unk +"\t" + str(log)
-            log += math.log(float(freq_unk)/float(unigrams[vocab.index(sentence[i-1])]))
+            #log += math.log(float(freq_unk)/float(unigrams[vocab.index(sentence[i-1])]))
+            log += math.log(1)
         found = False 
 print "Log Likelihood:" + str(log)
 #Log Likelihood:-30.61667048
