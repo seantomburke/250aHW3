@@ -22,15 +22,16 @@ total_words = 0.00
 log = float(0.00)
 
 for i in range (len(sentence)):
-    if(i == 0):
-        log += math.log(float(unigrams[vocab.index(sentence[i])])/float(unigrams[vocab.index(sentence[i + 1])]))
-    else:
+    # if(i == 0):
+    #     log += math.log(float(unigrams[vocab.index(sentence[i])])/float(unigrams[vocab.index(sentence[i + 1])]))
+    # else:
         for b in bigrams:
             if(b[0] == sentence[i-1] and b[1] == sentence[i]):
                 print b[0] + "\t" + b[1] + "\t" + str(log)
                 log += math.log(float(b[2])/float(unigrams[vocab.index(sentence[i-1])]))
 print "Log Likelihood:" + str(log)
-#Log Likelihood:-41.161725891
+#Log Likelihood:-40.9181321338
+
 
 
 

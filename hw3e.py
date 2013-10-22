@@ -32,9 +32,9 @@ for n in range (1,100):
 	#print lamb
 	log.append(0);
 	for i in range (len(sentence)):
-	    if(i == 0):
-	        log[n-1] += math.log((1-lamb[n-1])*(float(unigrams[vocab.index(sentence[i])])/float(unigrams[vocab.index(sentence[i + 1])])) + (lamb[n-1])*(float(unigrams[vocab.index(sentence[i])])/float(total_unigram_words)))
-	    else:
+	    # if(i == 0):
+	    #     log[n-1] += math.log((1-lamb[n-1])*(float(unigrams[vocab.index(sentence[i])])/float(unigrams[vocab.index(sentence[i + 1])])) + (lamb[n-1])*(float(unigrams[vocab.index(sentence[i])])/float(total_unigram_words)))
+	    # else:
 	        found = False
 	        for b in bigrams:
 	            if(b[0] == sentence[i-1] and b[1] == sentence[i]):

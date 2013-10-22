@@ -16,7 +16,7 @@ for u in unigrams:
 
 for word in sentence:
     log += math.log(float(unigrams[vocab.index(word)])/float(total_words))
-    print word +"\t" + str(log)
+    print "%-10s%f" %(word,log)
 print "Log Likelihood:" + str(log)
 #Log Likelihood:-44.2919344731
 
